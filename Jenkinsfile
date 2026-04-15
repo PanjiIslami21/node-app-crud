@@ -2,15 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage ('Build') {
+        stage('Build') {
             steps {
                 sh 'docker build -t node-crud .'
             }
         }
-    }
 
-    stages {
-        stage ('Run') {
+        stage('Run') {
             steps {
                 sh 'docker stop node-crud || true'
                 sh 'docker rm node-crud || true'
