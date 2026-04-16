@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 
 // Routes
 app.get("/", (req, res) => {
-  res.render("index");
+  res.send("Node CRUD is running 🚀");
 });
 
 app.post("/create", async (req, res) => {
